@@ -3,3 +3,4 @@ openai
 pypdf
 chromadb==0.3.29
 tiktoken
+streamlit-extras
