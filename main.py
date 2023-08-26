@@ -65,8 +65,8 @@ if uploaded_file is not None:
         def __init__(self, container, initial_text=""):
             self.container = container
             self.text = initial_text
-        def on_llm_new_token(self, token: str, *, run_id: UUID, parent_run_id: UUID | None = None, **kwargs: Any):
-            self.text += token
+        def on_llm_new_token(self, token: str, **kwargs) -> None:
+            self.text+=token
             self.container.markdown(self.text)
 
     # Question
